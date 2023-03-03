@@ -1,0 +1,15 @@
+version: '3'
+services:
+  database:
+    image: 'postgres:13'
+    ports:
+      - 5432:5432
+    volumes:
+      - my-vol:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: username 
+      POSTGRES_PASSWORD: password 
+      POSTGRES_DB: movie_database  
+volumes:   
+  my-vol: 
+    external: true
