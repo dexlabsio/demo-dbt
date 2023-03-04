@@ -1,15 +1,24 @@
 dbt-postgres:
-  target: dev
   outputs:
+
     dev:
       type: postgres
+      threads: 1
       host: 127.0.0.1
-      user: username
-      password: password
       port: 5432
-      dbname: database
+      user: username
+      pass: password
+      dbname: movie_database
       schema: dbt_schema
-      threads: 2
-      keepalives_idle: 0 
-      connect_timeout: 10 
-      retries: 1  
+
+    # prod:
+    #   type: postgres
+    #   threads: [1 or more]
+    #   host: [host]
+    #   port: [port]
+    #   user: [prod_username]
+    #   pass: [prod_password]
+    #   dbname: [dbname]
+    #   schema: [prod_schema]
+
+  target: dev
