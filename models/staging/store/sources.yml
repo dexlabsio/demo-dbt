@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: actor
+        description: >
+          stores actors data including first name and last name.
+      - name: address
+        description: >
+          stores address data for staff and customers
+      - name: category
+        description: >
+          stores film's categories data.
+      - name: city
+        description: >
+          stores city names.
+      - name: country
+        description: >
+          stores country names.
+      - name: customer
+        description: >
+          stores customer data.
+      - name: film
+        description: >
+          stores film data such as title, release year, length, rating, etc.
+      - name: film_actor
+        description: >
+          stores the relationships between films and actors.
+      - name: film_category
+        description: >
+          stores the relationships between films and categories.
+      - name: inventory
+        description: >
+          stores inventory data.
+      - name: payment
+        description: >
+          stores customer's payments.
+      - name: rental
+        description: >
+          stores rental data.
+      - name: staff
+        description: >
+          stores staff data.
+      - name: store
+        description: >
+          contains the store data including manager staff and address.
+      - name: _language_
+        description: >
+          contains the language data.
