@@ -4,9 +4,16 @@ build:
 
 up:
 	docker compose up -d
+	sudo docker volume create my-vol
 
 down:
 	docker compose down
+
+.PHONY: postgres
+
+install-postgres:
+	@docker exec -it dbt-demo-database-1 psql -U username -d movie_database
+	@psql -c "CREATE DATABASE mydatabase;"
 
 
 .PHONY: requirements-dev
