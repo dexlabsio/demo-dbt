@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_store
+    description: This table contains the store.
+
+    columns:
+      - name: store_id
+        description: This is a unique identifier for the store.
+        tests:
+          - unique
+          - not_null
+
+      - name: staff_manager_name
+        quote: true
+        description: The name of the manager.
+
+      - name: address_number
+        quote: true
+        description: Store address number.
+
+      - name: address
+        quote: true
+        description: Store adress.
+
+      - name: district
+        quote: true
+        description: Store district.
+
+      - name: postal_code
+        quote: true
+        description: Store postal code.
+
+      - name: phone
+        quote: true
+        description: Store phone number.
+
+      - name: city
+        quote: true
+        description: Store city.
+
+      - name: country
+        quote: true
+        description: Store country.
+ 

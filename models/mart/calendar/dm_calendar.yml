@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_calendar
+    description: This table contains dates from year 2000 to 2020.
+
+    columns:
+      - name: date_day
+        description: Complete date.
+        tests:
+          - unique
+          - not_null
+
+      - name: number_day
+        quote: true
+        description: The day of the date.
+
+      - name: number_month
+        quote: true
+        description: The month of the date.
+
+      - name: number_year
+        quote: true
+        description: The year of the date.
+
+      - name: week
+        quote: true
+        description: Week date.
+
+      - name: mth
+        quote: true
+        description: Month date.
+
+      - name: year
+        quote: true
+        description: Year date.

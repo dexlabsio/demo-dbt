@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: This table contains the customer of the store.
+
+    columns:
+      - name: customer_id
+        description: This is a unique identifier for the customer
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_store_id
+        quote: true
+        description: The store the customer is registered.
+
+      - name: customer_name
+        quote: true
+        description: The customer name.
+
+      - name: email
+        quote: true
+        description: The customer email.
+
+      - name: customer_is_active
+        quote: true
+        description: Flag that indicates if the customer is active.
+        tests:
+          - not_null
+
+      - name: created_at
+        quote: true
+        description: data of the registration of the customer in the database
+        tests:
+          - not_null
+
+      - name: updated_at
+        quote: true
+        description: datetime of the last update.
+
+      - name: address_number
+        quote: true
+        description: number of the address
+
+      - name: address
+        quote: true
+        description: address of the customer.
+    
+      - name: phone
+        quote: true
+        description: phone of the customer
+
+      - name: city
+        quote: true
+        description: City of the customer.    
+
+      - name: country
+        quote: true
+        description: Country of the customer.  

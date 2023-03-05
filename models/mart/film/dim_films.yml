@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: dim_films
+    description: This table contains the films of the store.
+
+    columns:
+      - name: film_id
+        description: This is a unique identifier for the film.
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        quote: true
+        description: The title of the film.
+
+      - name: description
+        quote: true
+        description: The description of the film.
+
+      - name: release_year
+        quote: true
+        description: The release_year of the film.
+
+      - name: language
+        quote: true
+        description: The language of the film.
+
+      - name: category
+        quote: true
+        description: The category of the film.
+
+      - name: actor_complete_name
+        quote: true
+        description: The name of the actor of the film.
+
+      - name: rental_duration
+        quote: true
+        description: The max duraton of the rental.
+
+      - name: rental_rate
+        quote: true
+        description: Price for the rental (daily).
+
+      - name: length
+        quote: true
+        description: The length of the film.
+
+      - name: replacement_cost
+        quote: true
+        description: The cos of replace for the film.
+
+      - name: rating
+        quote: true
+        description: Rate of the movie.
+
+      - name: update_at
+        quote: true
+        description: Last update date.
+
+      - name: special_features
+        quote: true
+        description: Special features of the film.

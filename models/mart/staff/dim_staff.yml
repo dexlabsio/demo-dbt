@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_staff
+    description: This table contains the staff of the store.
+
+    columns:
+      - name: staff_id
+        description: This is a unique identifier for the staff member
+        tests:
+          - unique
+          - not_null
+
+      - name: staff_name
+        quote: true
+        description: The name of the staff member.
+
+      - name: address_number
+        quote: true
+        description: The adress number of the staff member.
+
+      - name: address
+        quote: true
+        description: The adress of the staff member.
+
+      - name: email
+        quote: true
+        description: The email of the staff member.
+
+      - name: active
+        quote: true
+        description: Flag that indicates a active staff member.
+
+      - name: username
+        quote: true
+        description: Username of the staff member
+
+      - name: update_at
+        quote: true
+        description: last date of update
+
+      - name: picture
+        quote: true
+        description: Picture of the staff member.
+    

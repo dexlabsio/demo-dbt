@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: fact_rentals
+    description: This table contains all the rentals for the store.
+
+    columns:
+      - name: rental_id
+        description: This is a unique identifier of the rental.
+        tests:
+          - unique
+          - not_null
+
+      - name: rental_date
+        quote: true
+        description: The date of the rental.
+
+      - name: time_to_return_days
+        quote: true
+        description: The tiem in days taht the rental returned.
+
+      - name: rental_duration
+        quote: true
+        description: The duration of the rental in days.
+
+      - name: return_status
+        quote: true
+        description: Status of the return.
+
+      - name: customer_id
+        quote: true
+        description: Unique identifier of the customer.
+        tests:
+          - not_null
+      
+      - name: return_date
+        quote: true
+        description: The return date of the rental.
+
+      - name: staff_id
+        quote: true
+        description: Unique identifier of the staff member.
+        tests:
+          - not_null
+
+      - name: film_id
+        quote: true
+        description: Unique identifier of the film.
+        tests:
+          - not_null
+
+      - name: store_id
+        quote: true
+        description: Unique identifier of the store.
+
+      - name: rental_payment
+        quote: true
+        description: Value of the payment.
+
+      - name: update_at
+        quote: true
+        description: Last datetime of the update.
+    
+      - name: update_date
+        quote: true
+        description: Last date of the update.
+  

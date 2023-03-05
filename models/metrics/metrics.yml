@@ -1,0 +1,36 @@
+version: 2
+
+metrics:
+  - name: revenue
+    label: Revenue
+    model: ref('fact_rentals')
+    description: >
+      'TOtal Revenue of the company.'
+    tags: ['Company Metric']
+
+    calculation_method: sum
+    expression: rental_payment
+
+    timestamp: rental_date
+    time_grains: [day, month, quarter, year]
+
+    meta:
+      metric_level: 'Company'
+      owner(s): 'Joao Victor'
+
+  - name: rentals
+    label: Rentals
+    model: ref('fact_rentals')
+    description: >
+      'Total Rentals of the company.'
+    tags: ['Company Metric']
+
+    calculation_method: count
+    expression: rental_id
+
+    timestamp: rental_date
+    time_grains: [day, month, quarter, year]
+
+    meta:
+      metric_level: 'Company'
+      owner(s): 'Joao Victor'
