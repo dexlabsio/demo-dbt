@@ -1,4 +1,4 @@
-# dbt-demo
+# demo-dbt
 A repository for DBT demonstration running against a Postgres database
 
 ## Instructions
