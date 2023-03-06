@@ -11,10 +11,8 @@ down:
 
 .PHONY: postgres
 
-install-postgres:
+postgres:
 	@docker exec -it dbt-demo-database-1 psql -U username -d movie_database
-	@psql -c "CREATE DATABASE mydatabase;"
-
 
 .PHONY: requirements-dev
 ## install development requirements
