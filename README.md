@@ -52,7 +52,7 @@ Here are some other useful commands that can help you while using DBT:
 - You can specify the models and all of their child and parent models by running:
 
   ```bash
-  dbt run [your model name]     # For only the specified model.
-  dbt run [your model name]+   # For the specified model and all its child models.
-  dbt run +[your model name]   # For the specified model and all its parent models.
-  dbt run +[your model name]+ # For the specified model and all its child and parent models.
+  dbt run -m [your model name]     # For only the specified model.
+  dbt run -m [your model name]+   # For the specified model and all its child models.
+  dbt run -m +[your model name]   # For the specified model and all its parent models.
+  dbt run -m +[your model name]+ # For the specified model and all its child and parent models.
